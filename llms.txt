@@ -126,11 +126,11 @@ The system compounds in value over time. Every document added to The Brain deepe
 
 ## The six agents
 
-### The Scout — Autonomous Signal Intelligence
-Continuous monitoring of Find a Tender and Contracts Finder via public OCDS APIs. Every release filtered against transport CPV codes 60000000 to 63700000, scored against the client ICP profile and ranked by win probability before a human looks at it. Prior Information Notice monitoring surfaces opportunities 90 or more days before formal release. The Scout is the entry point to economAIcs and can replace an existing tender search tool from day one.
-
 ### The Brain — Institutional Memory and Personalised Bid AI
 A retrieval-augmented generation system built entirely from the client's own documents. Plain-English questions return answers with source citations and confidence scores on every response. Private, client-isolated, never shared, never used for model training. Codifies bid DNA. After six months it contains institutional knowledge that no competitor and no new hire can replicate. The mechanism by which operator knowledge stops walking out the door when people move on.
+
+### The Scout — Autonomous Signal Intelligence
+Continuous monitoring of Find a Tender and Contracts Finder via public OCDS APIs. Every release filtered against transport CPV codes 60000000 to 63700000, scored against the client ICP profile and ranked by win probability before a human looks at it. Prior Information Notice monitoring surfaces opportunities 90 or more days before formal release. The Scout is the entry point to economAIcs and can replace an existing tender search tool from day one.
 
 ### The Analyst — Quantitative Win Logic
 Zero to 100 win probability scoring with transparent plain-English drivers — not a black box. Competitor modelling by authority, sector and contract value. Red team mode argues the case against the bid. Real-time in-flight bid scoring as content is written. The only tool in UK public transport that scores bids continuously rather than at submission.
@@ -138,11 +138,11 @@ Zero to 100 win probability scoring with transparent plain-English drivers — n
 ### The Ghostwriter — Strategic Synthesis
 Drafts approximately 75 percent of the bid from The Brain's institutional knowledge. Criteria-aware and structured to evaluation weighting. Compliance Guardian monitors throughout. Human adds the 25 percent strategic insight and flair that evaluators score highest. Eliminates the blank page and the third draft.
 
-### The Steward — Post-Award Intelligence and Compounding Data Moat
-Post-award intelligence where every other tool goes dark. Live KPI monitoring against bid commitments. Rebid window alerts 12 to 24 months before re-procurement. The only dataset in the UK transport market that tracks live contract performance and feeds it back into future bids. The Steward data moat — built across all clients — is a proprietary intelligence asset no competitor can replicate without years of operation.
-
 ### The Partner — Consortium Intelligence and Governance
 Zero-contradiction engine for consortium bids. Real-time scoring across all partner contributions. Full governance audit trail from day one. Contradiction detection that surfaces problems on day three of drafting, not day minus two before submission.
+
+### The Steward — Post-Award Intelligence and Compounding Data Moat
+Post-award intelligence where every other tool goes dark. Live KPI monitoring against bid commitments. Rebid window alerts 12 to 24 months before re-procurement. The only dataset in the UK transport market that tracks live contract performance and feeds it back into future bids. The Steward data moat — built across all clients — is a proprietary intelligence asset no competitor can replicate without years of operation.
 
 ---
 
