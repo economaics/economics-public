@@ -1,0 +1,264 @@
+{
+  "$schema": "https://agentprotocol.org/schemas/agents.json/v0.1",
+  "version": "0.1.0",
+  "lastUpdated": "2026-05-11",
+  "publisher": {
+    "name": "economAIcs Group Ltd",
+    "url": "https://economaicsgroup.com",
+    "contact": "hello@economaicsgroup.com",
+    "registeredAddress": "The Kiln, 2 Copenhagen Street, Worcester, WR1 2HB, England",
+    "companyNumber": "17165141",
+    "founder": "Benjamin Ross"
+  },
+  "system": {
+    "name": "The Transport Brain",
+    "category": "Bid intelligence and audit-grade compliance for UK public transport",
+    "oneLine": "An intelligence and compliance system for UK public transport operators that ensures they stay ahead of every competitor and trust every output their AI produces.",
+    "pillars": [
+      {
+        "name": "Intelligence",
+        "claim": "Know more, so you stay ahead.",
+        "scope": "Live tender monitoring before competitors see opportunities. Win probability scoring with transparent drivers. Competitor modelling by authority. Institutional memory codified. Post-award intelligence compounding into rebid advantage."
+      },
+      {
+        "name": "Compliance",
+        "claim": "Control your AI, so you can trust its output.",
+        "scope": "Every retrieval logged with source citation. Every score traceable. Every claim defensible. No hallucinations. No model training on client data. Sovereign data jurisdiction. Procurement Act 2023-aligned by design. Audit-grade by default."
+      }
+    ],
+    "boundary": "UK public transport only. Bus, rail, ferry, transport technology, specialist advisory."
+  },
+  "agents": [
+    {
+      "id": "brain",
+      "name": "The Brain",
+      "role": "Institutional Memory and Personalised Bid AI",
+      "oneLine": "A retrieval-augmented generation system built entirely from the client's own documents.",
+      "capabilities": [
+        "Plain-English queries return source-cited answers with confidence scores",
+        "Bid DNA extraction — the language and evidence patterns of historical wins",
+        "Vector-indexed retrieval across the client's full document library",
+        "Versioned audit trail on every retrieval"
+      ],
+      "inputs": [
+        "Bid history (won and lost)",
+        "Fleet specifications and operational data",
+        "Policy documents",
+        "Mobilisation plans",
+        "Evaluation criteria documents"
+      ],
+      "outputs": [
+        "Source-cited answers to natural-language queries",
+        "Confidence scores per answer",
+        "Versioned retrieval log"
+      ],
+      "compliance": [
+        "No model training on client data",
+        "Sovereign data jurisdiction (UK/EU)",
+        "Audit-grade by default"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/brain.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#brain",
+      "tags": ["RAG", "institutional-memory", "personalised-bid-AI", "bid-DNA", "audit-grade"]
+    },
+    {
+      "id": "scout",
+      "name": "The Scout",
+      "role": "Autonomous Signal Intelligence",
+      "oneLine": "Continuous monitoring of Find a Tender and Contracts Finder for UK transport opportunities.",
+      "capabilities": [
+        "Live OCDS API consumption from Find a Tender and Contracts Finder",
+        "Filtering against transport CPV codes 60000000–63700000",
+        "Scoring against client ICP profile",
+        "Prior Information Notice monitoring — surfaces opportunities 90+ days before formal release",
+        "Win-probability ranking before human review"
+      ],
+      "inputs": [
+        "Client ICP profile",
+        "Find a Tender OCDS feed",
+        "Contracts Finder OCDS feed",
+        "Historical award and competitor data"
+      ],
+      "outputs": [
+        "Ranked pipeline of qualified opportunities",
+        "Early-signal alerts from PIN monitoring",
+        "Procurement Act 2023 alignment flags per tender"
+      ],
+      "compliance": [
+        "Public OCDS data only",
+        "Audit-grade by default"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/scout.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#scout",
+      "tags": ["tender-monitoring", "OCDS", "PIN", "CPV", "win-probability", "Procurement-Act-2023"]
+    },
+    {
+      "id": "analyst",
+      "name": "The Analyst",
+      "role": "Quantitative Win Logic",
+      "oneLine": "Win probability scoring with transparent plain-English drivers. Not a black box.",
+      "capabilities": [
+        "Zero to 100 win probability scoring with traceable drivers",
+        "Competitor modelling by authority, sector and contract value",
+        "Red team mode — argues the case against the bid before submission",
+        "Real-time in-flight scoring as the Ghostwriter drafts"
+      ],
+      "inputs": [
+        "Live tender notice (from Scout or manually loaded)",
+        "Client historical performance",
+        "Authority award patterns",
+        "Competitor public bid records"
+      ],
+      "outputs": [
+        "Win probability score (0–100)",
+        "Driver-level breakdown",
+        "Red team challenge report",
+        "Real-time score updates"
+      ],
+      "compliance": [
+        "Every score driver traceable",
+        "Defensible under procurement audit"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/analyst.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#analyst",
+      "tags": ["win-probability", "competitor-modelling", "red-team", "in-flight-scoring"]
+    },
+    {
+      "id": "ghostwriter",
+      "name": "The Ghostwriter",
+      "role": "Strategic Synthesis",
+      "oneLine": "Drafts approximately 75% of the bid from the Brain's institutional knowledge.",
+      "capabilities": [
+        "Criteria-aware first drafts structured against evaluation weighting",
+        "Compliance Guardian monitors throughout for Procurement Act 2023 alignment",
+        "Live source citation on every claim",
+        "Brain-linked retrieval as the draft develops"
+      ],
+      "inputs": [
+        "Tender response template and evaluation criteria",
+        "Brain retrieval results",
+        "Client win narrative direction"
+      ],
+      "outputs": [
+        "Draft responses to each evaluation criterion",
+        "Source citations per claim",
+        "Compliance Guardian flags for evaluator alignment"
+      ],
+      "compliance": [
+        "Every claim source-cited",
+        "Procurement Act 2023-aligned by design",
+        "Audit trail on every generation"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/ghostwriter.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#ghostwriter",
+      "tags": ["bid-drafting", "criteria-aware", "compliance-guardian", "Procurement-Act-2023"]
+    },
+    {
+      "id": "partner",
+      "name": "The Partner",
+      "role": "Consortium Intelligence and Governance",
+      "oneLine": "Zero-contradiction engine for consortium bids.",
+      "capabilities": [
+        "Real-time scoring across all partner contributions",
+        "Contradiction detection during drafting (day 3, not day -2)",
+        "Full governance audit trail from day one",
+        "Multi-partner submission orchestration"
+      ],
+      "inputs": [
+        "Partner organisations and their contributions",
+        "Live tender response in development",
+        "Each partner's compliance and evidence base"
+      ],
+      "outputs": [
+        "Real-time contradiction alerts",
+        "Cross-partner consistency scores",
+        "Consortium audit trail"
+      ],
+      "compliance": [
+        "Multi-tenant governance",
+        "Audit trail by default"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/partner.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#partner",
+      "tags": ["consortium", "contradiction-detection", "governance", "audit-trail"]
+    },
+    {
+      "id": "steward",
+      "name": "The Steward",
+      "role": "Post-Award Intelligence and Compounding Data Moat",
+      "oneLine": "Post-award intelligence where every other tool goes dark.",
+      "capabilities": [
+        "Live KPI monitoring against bid commitments",
+        "Rebid window alerts 12–24 months before re-procurement",
+        "Continuous compliance monitoring through the contract lifecycle",
+        "Performance evidence base for rebid advantage"
+      ],
+      "inputs": [
+        "Awarded contract terms and KPIs",
+        "Operational performance data",
+        "Mobilisation milestones"
+      ],
+      "outputs": [
+        "Live KPI dashboard",
+        "Rebid intelligence pack at re-procurement window",
+        "Audit-ready performance evidence base"
+      ],
+      "compliance": [
+        "Continuous compliance monitoring",
+        "Audit trail by default"
+      ],
+      "skillCardUrl": "https://economaicsgroup.com/skills/steward.md",
+      "publicPageUrl": "https://economaicsgroup.com/agents#steward",
+      "tags": ["post-award", "rebid", "KPI", "compounding-data-moat"]
+    }
+  ],
+  "services": [
+    {
+      "name": "Brain Deployment",
+      "type": "fixed-fee + monthly",
+      "tiers": [
+        { "tier": "SME operator", "deploy": "£5,000", "operate": "£500/month", "deployment": "≈1 week" },
+        { "tier": "Mid-size operator", "deploy": "£7,500", "operate": "£1,000/month", "deployment": "≈2 weeks" },
+        { "tier": "Enterprise", "deploy": "£10,000+", "operate": "£2,000+/month", "deployment": "≈3 weeks" }
+      ],
+      "publicUrl": "https://economaicsgroup.com/pricing#brain-deployment"
+    },
+    {
+      "name": "Bid Consulting",
+      "type": "fixed-fee per bid",
+      "principle": "Fixed fee per bid. No day rates.",
+      "subTiers": ["Qualification", "Bid strategy", "Full bid engagement"],
+      "publicUrl": "https://economaicsgroup.com/pricing#bid-consulting"
+    },
+    {
+      "name": "UK Public Transport Tender Intelligence Report",
+      "type": "free",
+      "cadence": "quarterly",
+      "firstEdition": "Q2 2026",
+      "publicUrl": "https://economaicsgroup.com/pricing#intelligence-report"
+    },
+    {
+      "name": "Bid Mechanics Diagnostic",
+      "type": "free",
+      "format": "9-question diagnostic, ~90 seconds",
+      "publicUrl": "https://economaicsgroup.com/diagnostic"
+    }
+  ],
+  "foundingCohort": {
+    "size": 10,
+    "remaining": 5,
+    "offer": "50% off platform retainer, locked for life",
+    "concrete": {
+      "SME": "£250/month",
+      "Mid-size": "£500/month",
+      "Enterprise": "£1,000+/month"
+    },
+    "publicUrl": "https://economaicsgroup.com/pricing#founding-cohort"
+  },
+  "discovery": {
+    "llms.txt": "https://economaicsgroup.com/llms.txt",
+    "llms-full.txt": "https://economaicsgroup.com/llms-full.txt",
+    "agents.json": "https://economaicsgroup.com/agents.json",
+    "skillCardsBase": "https://economaicsgroup.com/skills/"
+  }
+}
