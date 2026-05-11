@@ -275,11 +275,26 @@ Benjamin Ross. 15-plus years in UK public transport. 500-plus tenders personally
 - Agents: https://economaicsgroup.com/agents
 - Intelligence and Compliance: https://economaicsgroup.com/intelligence
 - Compliance section (anchor): https://economaicsgroup.com/intelligence#compliance
+- Pricing: https://economaicsgroup.com/pricing
 - About: https://economaicsgroup.com/about
 - AI page: https://economaicsgroup.com/ai
 - Compliance and Governance section (anchor): https://economaicsgroup.com/ai#compliance-governance
 - Bid Mechanics Diagnostic: https://economaicsgroup.com/diagnostic
 - Privacy policy: https://economaicsgroup.com/privacy-policy
 - Terms of use: https://economaicsgroup.com/terms-of-use
-- Book a demo: https://calendar.app.google/G3jmifLtryti2H1Z8
+- Book a walkthrough: https://calendar.app.google/G3jmifLtryti2H1Z8
 - Subscribe to Intelligence Report: https://docs.google.com/forms/d/e/1FAIpQLSdIEFPBTCzxe3WC9GYiRYvEdWpbXigQjfOyoEAy2KgHzpQAZw/viewform
+
+## Machine-readable discovery surfaces
+
+This file is part of a layered AI-discovery surface. For deeper machine retrieval:
+
+- **Structured agent manifest:** https://economaicsgroup.com/agents.json
+- **Skill cards index:** https://economaicsgroup.com/skills/
+- **The Brain skill card:** https://economaicsgroup.com/skills/brain.md
+- **The Scout skill card:** https://economaicsgroup.com/skills/scout.md
+- **The Analyst skill card:** https://economaicsgroup.com/skills/analyst.md
+- **The Ghostwriter skill card:** https://economaicsgroup.com/skills/ghostwriter.md
+- **The Partner skill card:** https://economaicsgroup.com/skills/partner.md
+- **The Steward skill card:** https://economaicsgroup.com/skills/steward.md
+- **Deep system brief (extended retrieval):** https://economaicsgroup.com/llms-full.txt
