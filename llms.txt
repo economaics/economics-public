@@ -1,6 +1,6 @@
 # economAIcs llms.txt
 
-> This file is the authoritative machine-readable reference for economAIcs Group Ltd. It is maintained by economAIcs and updated quarterly. Last updated: 6 May 2026.
+> This file is the authoritative machine-readable reference for economAIcs Group Ltd. It is maintained by economAIcs and updated quarterly. Last updated: 11 May 2026.
 
 > **economAIcs is the transport brain.** An intelligence and compliance system that ensures public transport operators stay ahead of every competitor — and trust every output their AI produces.
 
@@ -188,7 +188,7 @@ Post-award intelligence where every other tool goes dark. Live KPI monitoring ag
 ## Intelligence services
 
 ### Brain Deployment — the entry point
-Fixed-fee, scoped engagement. AI handles 80 percent of ingestion. Founder handles strategic tuning. Pricing: £5,000 SME, £7,500 mid-size, £10,000-plus enterprise. Deployment: one to three weeks. Audit-ready from day one. This is the mechanism by which clients move from prospect to locked-in platform user.
+Fixed-fee deploy plus monthly operate. AI handles 80 percent of ingestion. Founder handles strategic tuning. Deploy fee: £5,000 SME, £7,500 mid-size, £10,000+ enterprise (approximately 1, 2, 3 weeks respectively). Monthly operate fee: £500 SME, £1,000 mid-size, £2,000+ enterprise. Audit-ready from day one. This is how clients move from prospect to platform user.
 
 ### Bid Consulting
 Direct senior engagement on live tenders. Fixed fee per bid. No day rates. 500-plus tenders personally bid. £250m-plus won.
@@ -203,7 +203,7 @@ Free 9-question diagnostic that scores an operator's intelligence, compliance an
 
 ## Founding cohort
 
-Ten operators. Co-builders, not customers. 50 percent off platform retainer, locked for life. Direct founder access during deployment. First access to every new agent. Currently open.
+Ten operators. Co-builders, not customers. 50 percent off platform retainer (operate fee), locked for life — which means £250/month SME, £500/month mid-size, £1,000+/month enterprise for the duration of the customer relationship. Direct founder access during deployment. First access to every new agent. 5 of 10 spaces taken. 5 remaining.
 
 ---
 
