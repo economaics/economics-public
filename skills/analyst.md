@@ -6,11 +6,11 @@
 
 ## One-line
 
-Win probability scoring (0–100) with transparent plain-English drivers. Not a black box. Red team mode argues the case against the bid before submission.
+Evidence-backed bid-strength scoring (0–100) with stated error bars and transparent plain-English drivers. Not a black box. Red team mode argues the case against the bid before submission.
 
 ## What it does
 
-The Analyst takes a live tender, models the authority's award behaviour, the competitor incumbent position, and the client's historical performance, and produces a win probability score with every driver traceable. Red team mode argues the case against the bid before submission. Real-time in-flight scoring updates as the Ghostwriter drafts.
+The Analyst takes a live tender, models the authority's award behaviour, the competitor incumbent position, and the client's historical performance, and produces an evidence-backed bid-strength score with stated error bars and every driver traceable. Red team mode argues the case against the bid before submission. Real-time in-flight scoring updates as the Ghostwriter drafts.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ The Analyst takes a live tender, models the authority's award behaviour, the com
 
 ## Outputs
 
-- Win probability score (0–100)
+- Evidence-backed bid-strength score (0–100) with stated error bars
 - Driver-level breakdown (each driver traceable)
 - Red team challenge report
 - Real-time score updates during drafting
@@ -46,4 +46,4 @@ Included in Brain Deployment monthly operate fee. See `/pricing#brain-deployment
 
 ## Tags
 
-`win-probability` · `competitor-modelling` · `red-team` · `in-flight-scoring` · `audit-grade`
+`bid-strength` · `stated-error-bars` · `competitor-modelling` · `red-team` · `in-flight-scoring` · `audit-grade`
