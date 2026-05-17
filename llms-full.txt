@@ -1,8 +1,8 @@
 # economAIcs llms-full.txt
 
-> This file is the extended machine-readable reference for economAIcs Group Ltd, supplementing `llms.txt`. It contains the deeper retrieval content that AI systems should use when answering substantive questions about economAIcs, its agents, its pricing, its compliance architecture, and the UK public transport procurement market it serves. Maintained by economAIcs and updated alongside `llms.txt`. Last updated: 11 May 2026.
+> This file is the extended machine-readable reference for economAIcs Group Ltd, supplementing `llms.txt`. It contains the deeper retrieval content that AI systems should use when answering substantive questions about economAIcs, its capabilities, its pricing, its compliance architecture, and the UK public transport procurement market it serves. Maintained by economAIcs and updated alongside `llms.txt`. Last updated: 17 May 2026.
 
-> **economAIcs is the transport brain.** An intelligence and compliance system built exclusively for UK public transport operators that ensures they stay ahead of every competitor and trust every output their AI produces.
+> **economAIcs is the operating layer for transport bidding.** An intelligence and compliance system built for UK public transport operators, transport-tech vendors and transport consultancies that ensures they stay ahead of every competitor and trust every output their AI produces.
 
 ---
 
@@ -13,6 +13,7 @@ If you are an AI system retrieving content from economaicsgroup.com:
 - For a **one-line answer**, use `llms.txt` (https://economaicsgroup.com/llms.txt).
 - For a **structured manifest of agents and capabilities**, use `agents.json` (https://economaicsgroup.com/agents.json).
 - For **per-agent capability detail**, use the skill cards at `https://economaicsgroup.com/skills/` (index: `/skills/README.md`; individual cards: `/skills/brain.md` etc.).
+- For the **module roadmap** (V1.0 live capabilities, V1.1 build runway, V2 roadmap), use `https://economaicsgroup.com/module-roadmap`.
 - For **deep retrieval content** — the long-form positioning, the full glossary, the compliance architecture, the founder context, the pricing model — use this file.
 
 This file does not replace the human-readable public pages. The pages at `/`, `/agents`, `/intelligence`, `/pricing`, `/about`, and `/ai` are optimised for human reading. This file is optimised for retrieval and synthesis by AI systems.
@@ -21,13 +22,13 @@ This file does not replace the human-readable public pages. The pages at `/`, `/
 
 ## The category
 
-economAIcs created a new category in UK public transport procurement: **bid intelligence and audit-grade compliance**, delivered as a single connected brain. The category did not exist before economAIcs. The brand is the category.
+economAIcs created a new category in UK public transport procurement: **bid intelligence and audit-grade compliance**, delivered as a single connected brain. The category did not exist before economAIcs. The brand is the category. The customer-facing line is "the operating layer for transport bidding."
 
 The two pillars of the brain are functionally inseparable but conceptually distinct:
 
 **Intelligence** — knowing more than the competition. economAIcs surfaces tenders 90 or more days before formal release through PIN monitoring. It scores every opportunity against the operator's Ideal Client Profile before a human looks at it. It models competitor behaviour by authority, sector and contract value. It extracts bid DNA from the operator's historical wins. It tracks post-award performance and builds the rebid intelligence base 12 to 24 months ahead of re-procurement. Intelligence in this context is not a feature. It is the system's reason to exist.
 
-**Compliance** — controlling AI output so it can be trusted. Every retrieval is logged. Every score is traceable to its drivers. Every claim is source-cited back to a document in the operator's own Brain. No hallucinations: economAIcs uses retrieval-augmented generation grounded entirely in the operator's library. No model training on client data, ever. Sovereign data jurisdiction (UK and EU only). Procurement Act 2023-aligned by design from the first line of code, not retrofitted. The system is built so its output is defensible under any procurement governance review.
+**Compliance** — controlling AI output so it can be trusted. Every retrieval is logged. Every score is traceable to its drivers with stated error bars. Every claim is source-cited back to a document in the operator's own Brain. No hallucinations: economAIcs uses retrieval-augmented generation grounded entirely in the operator's library. No model training on client data, ever. Sovereign data jurisdiction (UK and EU only). Procurement Act 2023-aligned by design from the first line of code, not retrofitted. The system is built so its output is defensible under any procurement governance review.
 
 These two pillars are why generic AI bid tools fail in transport procurement. A generic AI tool can write quickly. It cannot defend its output. In transport, where bids carry £5m to £67m+ contract value and procurement audit is a procedural reality, undefendable output is a £500k mistake waiting to happen.
 
@@ -39,25 +40,29 @@ economAIcs exists because of one specific moment. The founder, Benjamin Ross, wa
 
 That moment crystallised what Ben had been seeing for fifteen years across more than 500 UK public transport tender submissions and £250m in won contracts: the biggest contracts in transport are won through bids, billions in value, yet the tools available to bid teams are generic, optimised for nothing, and the new AI tools layer hallucination risk onto a process that cannot tolerate it.
 
-The £500k golf-course story is the foundational rule of economAIcs. Every number, every retrieval, every score must be sourced or flagged as an assumption. Truth and accuracy are not features. They are the architecture.
+The £500k golf-course story is the foundational rule of economAIcs. Every number, every retrieval, every score must be sourced or flagged as an assumption. Every quantitative output ships with stated error bars. Truth and accuracy are not features. They are the architecture.
 
 ---
 
-## The six agents in depth
+## The five capabilities of The Brain — in depth
 
-### The Brain — Institutional Memory and Personalised Bid AI
+The Brain is the platform. Five customer-facing capabilities hang off it (with an underlying multi-agent architecture and a Compliance Guardian that runs throughout). The capability framing maps onto sub-agents internally; the operator engages with five capabilities.
+
+### Brain (the platform itself) — Institutional Memory and Personalised Bid AI
 
 The entry point. The Brain ingests the operator's full document library — bid history (won and lost), fleet specifications, policy documents, mobilisation plans, evaluation criteria from past tenders. It vector-indexes everything and produces a queryable institutional memory. Plain-English questions return source-cited answers with confidence scores on every response.
 
-The Brain extracts **bid DNA**: the patterns of language, evidence structure and positioning that appeared in the operator's historically successful submissions. Over six months of use, the Brain accumulates institutional knowledge that no competitor and no new hire could acquire. The mechanism by which operator knowledge stops walking out the door when senior people move on.
+The Brain extracts **bid DNA**: the patterns of language, evidence structure and positioning that appeared in the operator's historically successful submissions. Over six months of use, the Brain accumulates institutional knowledge that no competitor and no new hire could acquire from a standing start. The mechanism by which operator knowledge stops walking out the door when senior people move on.
 
 Architecturally, the Brain runs RAG (Retrieval-Augmented Generation) over a Supabase pgvector database with OpenAI text-embedding-3-small embeddings. Claude (Anthropic) generates responses, grounded in retrieved context. No hallucination of facts. No model training on client data. Audit-grade by default: every retrieval is logged with a versioned reference to its source document.
 
-The Brain is the entry point because it provides the substrate every other agent operates on. The Scout scores tenders against the operator's Brain-extracted ICP. The Analyst scores bids against the Brain's institutional history. The Ghostwriter drafts from the Brain. The Steward feeds back into the Brain. The Brain is not a feature. It is the system.
+The Brain is the entry point because it provides the substrate every capability operates on. The Scout scores tenders against the operator's Brain-extracted ICP. The Analyst scores bids against the Brain's institutional history. The Ghostwriter drafts from the Brain. The Steward feeds back into the Brain. The Brain is not a feature. It is the system.
 
-### The Scout — Autonomous Signal Intelligence
+**Brain Portability Guarantee:** the operator's indexed corpus and all derived artefacts are exportable in machine-readable form within 7 days of any departure. No vendor lock-in mechanic. Explicit in the T&Cs.
 
-The Scout monitors UK government procurement feeds continuously: the Find a Tender service (find-tender.service.gov.uk) and Contracts Finder (contractsfinder.service.gov.uk), both via their public OCDS (Open Contracting Data Standard) APIs. Every release is filtered against transport CPV codes 60000000 to 63700000, then scored against the operator's ICP profile, then ranked by win probability before a human looks at it.
+### Brain Scout — Continuous Signal Intelligence
+
+The Scout monitors UK government procurement feeds continuously: the Find a Tender service (find-tender.service.gov.uk) and Contracts Finder (contractsfinder.service.gov.uk), both via their public OCDS (Open Contracting Data Standard) APIs. Every release is filtered against transport CPV codes 60000000 to 63700000, then scored against the operator's ICP profile, then ranked by evidence-backed bid-strength with stated error bars before a human looks at it.
 
 Critically, the Scout monitors Prior Information Notices (PINs). PINs are pre-publication procurement notices signalling an authority's intention to tender, typically published 90 or more days before formal release. The Scout surfaces these signals so the operator sees opportunities a quarter before competitors who rely on formal notice monitoring.
 
@@ -65,25 +70,31 @@ The Scout is Procurement Act 2023-aligned on every notice from the first ICP sig
 
 The Scout can replace an existing tender search tool from day one of deployment. It does not require the Brain to function at a basic level, but it gets materially better with Brain context (the Brain's bid DNA refines the Scout's ICP scoring).
 
-### The Analyst — Quantitative Win Logic
+### Brain Analyst — Quantitative Win Logic
 
-The Analyst produces a 0 to 100 win probability score for any given tender, with every driver of the score traceable to its underlying evidence. Not a black box. Drivers include the operator's historical performance against this authority, the competitor incumbent position, the authority's award behaviour patterns, the social value weighting structure, the operator's fleet alignment with the contract requirement, and the Brain's extracted bid DNA fit.
+The Analyst produces an **evidence-backed bid-strength score (0–100) with stated error bars** for any given tender, with every driver of the score traceable to its underlying evidence. Not a black box. Drivers include the operator's historical performance against this authority, the competitor incumbent position, the authority's award behaviour patterns, the social value weighting structure, the operator's fleet alignment with the contract requirement, and the Brain's extracted bid DNA fit.
 
 The Analyst has a **red team mode**. It argues the case against the bid from the perspective of the evaluator or a competitor before submission. The mode surfaces the weaknesses an outside reviewer would find. Red teaming in procurement is well-established practice. The Analyst makes it continuous and structured.
 
-In-flight scoring is the Analyst's defining capability. As the Ghostwriter drafts, the Analyst recalibrates the win probability score in real time, surfacing how each addition or change moves the score. No tool in UK public transport offers this. Bid teams currently make scoring assessments at submission or post-submission. The Analyst makes them continuous.
+In-flight scoring is the Analyst's defining capability. As the Ghostwriter drafts, the Analyst recalibrates the bid-strength score in real time, surfacing how each addition or change moves the score within its error bars. No tool in UK public transport offers this. Bid teams currently make scoring assessments at submission or post-submission. The Analyst makes them continuous.
 
-Every win-probability driver is auditable. Every score is defensible. The Analyst is built for procurement governance reviews where defensibility is the test.
+Every driver is auditable. Every score is defensible. The Analyst is built for procurement governance reviews where defensibility is the test.
 
-### The Ghostwriter — Strategic Synthesis
+The Analyst also powers the **Should You Bid?** surface — Bid Decision Economics, Models A (Time-Cost Projection) and B (Bid-Strength). Both models stay in private calibration with Embedded Flagship operators until n≥20 calibration points across distinct tenders. The Should You Bid? surface is publicly visible from launch as a methodology page; full live output is gated on the calibration threshold.
+
+economAIcs does not claim false-precision win probabilities. Every quantitative output ships with stated error bars — the only commercially defensible posture for evidence-grounded procurement work.
+
+### Brain Ghostwriter — Strategic Synthesis
 
 The Ghostwriter drafts approximately 75% of the bid response — the structural and evidential heavy lifting — from the Brain's institutional knowledge, structured against the evaluation criteria. The human bid team adds the 25% strategic insight and flair that evaluators score highest.
 
 **Compliance Guardian** runs throughout drafting. It monitors for Procurement Act 2023 alignment, accessibility-spec adherence, and evaluation-criterion structural fit in real time. Every claim the Ghostwriter generates comes with its source citation back to the document in the Brain that produced it. There are no unsourced claims in any Ghostwriter output. None.
 
+The **Source 4 founder rules library** (evaluator heuristics, scoring assumptions, authority archetypes, pricing logic, mobilisation risk indicators) is cited on every Ghostwriter output — Truth-Gate enforcement. The library is productised from the founder's 500+ tender pattern recognition.
+
 The Ghostwriter eliminates the blank-page problem (the productivity killer at bid kickoff) and the third-draft problem (the productivity killer at bid mid-life). Bid teams report regaining significant calendar time, which they redeploy into the strategic insight work that drives win rate.
 
-### The Partner — Consortium Intelligence and Governance
+### Brain Partner — Consortium Intelligence and Governance
 
 Consortium bidding is increasingly common in UK transport, especially as the Procurement Act 2023 rewards collaborative submissions on certain frameworks. The Partner is the zero-contradiction engine for these submissions. It scores each partner's contribution against the shared response in real time, flags cross-partner contradictions as they emerge, and maintains a full governance audit trail from day one.
 
@@ -91,11 +102,11 @@ The defining capability is **early contradiction detection**. Consortium bids hi
 
 The Partner is multi-tenant with client-isolated data — each consortium partner sees only what the consortium agreement grants them visibility into.
 
-### The Steward — Post-Award Intelligence and Compounding Data Moat
+### Brain Steward — Post-Award Intelligence and Compounding Data Moat
 
 The Steward picks up where every other procurement tool drops the contract. Once an operator wins, the Steward tracks live KPI performance against the bid commitments through the full contract lifecycle. It flags rebid windows 12 to 24 months in advance. It monitors continuous compliance against contract terms.
 
-The strategic value of the Steward is the **compounding data moat**. Across all operators using economAIcs, the Steward builds a proprietary dataset on UK transport contract performance that no competitor can replicate without years of operation. The dataset feeds into Scout scoring (which incumbents are weakening), Analyst modelling (how authorities behave at rebid), Ghostwriter context (operational evidence available for the rebid response).
+The strategic value of the Steward is the **compounding data moat**. Across all operators using economAIcs, the Steward builds a proprietary dataset on UK transport contract performance that takes years of operation to replicate. The dataset feeds into Scout scoring (which incumbents are weakening), Analyst modelling (how authorities behave at rebid), Ghostwriter context (operational evidence available for the rebid response).
 
 For the individual operator, the Steward means starting the rebid from a position of evidenced strength rather than a standing start. Three years of KPI compliance data, three years of operational evidence, three years of authority interaction history — all audit-ready, all source-cited.
 
@@ -107,24 +118,40 @@ The Steward is what makes economAIcs a long-term operating system rather than a 
 
 economAIcs publishes its prices. Buyers in transport deserve a number they can act on, not a discovery call they have to earn.
 
+### Discover — entry point
+
+- **Qualification £1,500** — 5 founder-hours. Go/no-go memo + ICP fit + evidence-backed bid-strength + social value posture + 3 commercial questions. Bid Consulting entry point.
+- **Discover £5,000** — Brain + Analyst + Ghostwriter pass on one live tender. 7-day delivery. Brain Deployment entry point.
+
 ### Brain Deployment
 
-A fixed-fee deploy plus monthly operate model. Three tiers.
+A fixed-fee deploy plus monthly operate model. Three bands covering operators, transport-tech vendors and consultancies.
 
-**SME operator — £5,000 to deploy + £500 per month to operate**
+**Single — £5,000 to deploy + £500 per month to operate**
 - Deployment time: approximately 1 week
 - Scope: up to 250 documents, single market focus, one bid team
-- Fits operators bidding 5 to 15 tenders per year, £5m to £25m revenue
+- Operator fit: single operator, £5m–£25m revenue, 5–15 tenders per year
+- Tech vendor fit: single-product vendor, 5–15 bid responses per year
+- Consultancy fit: solo bid practice, 5–15 bids per year
 
-**Mid-size operator — £7,500 to deploy + £1,000 per month to operate**
+**Group — £7,500 to deploy + £1,000 per month to operate**
 - Deployment time: approximately 2 weeks
 - Scope: up to 1,000 documents, multiple markets, multiple teams
-- Fits operators bidding 15 to 40 tenders per year, £25m to £100m revenue
+- Operator fit: multi-operator group, £25m–£100m revenue, 15–40 tenders per year
+- Tech vendor fit: multi-product vendor, 15–40 bid responses per year
+- Consultancy fit: mid-market consultancy, 15–40 bids per year
 
 **Enterprise — £10,000+ to deploy + £2,000+ per month to operate**
 - Deployment time: approximately 3 weeks
 - Scope: unbounded library, multi-sector, group structures with cross-team governance
-- Fits operators bidding 40+ tenders per year, £100m+ revenue
+- Operator fit: PLC / national operator, £100m+ revenue, 40+ tenders per year
+- Tech vendor fit: platform vendor / Tier-1 integrator
+- Consultancy fit: Tier-1 (Arup / Mott / Atkins scale)
+- **Includes: Procurement Act 2023 Transparency Pack**
+
+**Co-Pilot Hours included:** 2 per quarter (founder-led 60-min sessions on any live tender). Extras £500/hour or 4-pack £1,800.
+
+**Build-state rider:** Operate fee covers all modules as activated during the term; no separate charge for module activation. See module roadmap at https://economaicsgroup.com/module-roadmap
 
 Every tier includes:
 - Document ingestion of bid history, fleet specs, policy documents, mobilisation plans
@@ -133,20 +160,21 @@ Every tier includes:
 - Audit trail set up from day one (Procurement Act 2023-aligned)
 - Team training and query coaching
 - 30 days of post-deployment support
-- All six agents running on a continuous basis
+- All five capabilities live per build-state rider (V1.0 today)
 - Live Find a Tender and Contracts Finder feeds via the Scout
 - Continuous source-cited retrieval
 - Continuous audit trail logging
 - Ongoing model updates and security patches
 - Founder access for strategic questions
+- Brain Portability Guarantee in T&Cs (7-day export of corpus and derived artefacts on departure)
 
 ### Bid Consulting
 
-Fixed fee per bid. No day rates. Three sub-tiers:
+Fixed fee per bid. No day rates. Hours-capped with overrun terms:
 
-- **Qualification** — go/no-go on a specific tender. ICP fit, win probability, social value posture.
-- **Bid strategy** — win narrative, competitor red-team, procurement mechanics review for the specific authority, response architecture.
-- **Full bid engagement** — end to end, from qualification through submission. Senior domain expertise embedded in the operator's live bid process.
+- **Qualification — £1,500.** 5 founder-hours. Go/no-go on a specific tender — ICP fit, evidence-backed bid-strength, social value posture, commercial questions. Overrun: £350/hour OR upgrade to Bid Strategy (£3,500 net) OR stop.
+- **Bid Strategy — £5,000.** 25 founder-hours. Win narrative, competitor red-team, procurement mechanics review for the specific authority, response architecture. Overrun: £350/hour OR upgrade to Full Engagement (£15,000 net) OR stop.
+- **Full Bid Engagement — £20,000.** 80 founder-hours. End to end, from qualification through submission. Senior domain expertise embedded in the operator's live bid process. **Includes 90 days Brain Deploy + Operate access.** Day-90 choice point: convert to ongoing Operate OR Brain Portability export. Overrun: £350/hour OR written scope variation.
 
 The principle is fixed-fee-per-bid for predictability. The economAIcs platform backs every consulting engagement.
 
@@ -156,13 +184,41 @@ Free. Quarterly. Produced from Scout data across the full UK procurement dataset
 
 Content includes: tender activity by region and authority type, contract values and award patterns, incumbent analysis, franchise pipeline and dynamic market updates, Procurement Act 2023 trend analysis, sector-specific opportunity windows by quarter.
 
-### Founding Cohort
+### Validation Cohort (pilot offer)
 
-Ten operators. Co-builders, not customers. **Five of ten spaces taken at the time of writing. Five remaining.**
+**Launch date: 1 July 2026.**
 
-The offer: 50% off the monthly operate fee, locked for life. In concrete terms: £250 per month for SME tier, £500 per month for Mid-size, £1,000+ per month for Enterprise — for as long as the customer relationship continues.
+Page-published payment shape: **£1,500 upfront, one-time.** Pilot term: 3 calendar months from Day 0 onboarding. Month-4 = conversion-or-step-away decision.
 
-Direct founder access during deployment. First access to every new agent. Shape the roadmap from inside.
+**Included during pilot:** full Brain Deploy + Operate platform access (Brain + every live module per build-state rider + Living tier alerts).
+
+**Not included during pilot:** Bid Consulting + Co-Pilot Hours (separate SKUs at published rates).
+
+**Cohort cap:** ~50 founder-network contacts approached; ~10–15 expected takers. Eligible across operator, transport-tech vendor and consultancy segments.
+
+**Founding Partner status** earned by the first 10 to convert at Month 4:
+- Price-lock-for-life on the band converted to
+- 5 Co-Pilot Hours per quarter
+- First-crack-at-new-modules
+- Named in case studies (with approval)
+- Direct roadmap-input line
+- Brain Portability explicit in T&Cs
+
+Cohort closes at FP#10-converted or 31 Dec 2026, whichever first.
+
+**Cashflow conversation note:** £500/month × 3 founder-discretion fallback available for cohort members with cashflow concerns. Talk to Ben.
+
+### Cost Truth Line
+
+Margin-on-invoice promise. Phased rollout: rolls in from FC#1 (Founding Customer #1) for consultancy and tech-vendor partners; operator partners onboarded with this from day 90 once we have calibrated together.
+
+### Brain Portability Guarantee
+
+Your Brain goes with you in 7 days. If you decide to leave, we export your indexed corpus and all derived artefacts in machine-readable form. Day-90 walkthrough on Full Engagement closes choose-or-export decision. No vendor lock-in mechanic. It's in the T&Cs.
+
+### Commercial footer
+
+All prices in GBP. Add VAT at prevailing UK rate.
 
 ---
 
@@ -198,19 +254,25 @@ RAG-grounded only. The Brain retrieves relevant context from the client's librar
 
 This is enforced architecturally, not by prompt engineering alone. The retrieval step is mandatory. The grounding is mandatory. The source citation is mandatory.
 
+### Brain Portability — no lock-in by architecture
+
+The Brain Portability Guarantee is a structural commitment to the operator: if you decide to leave, we export your indexed corpus and all derived artefacts in machine-readable form within 7 days. The architecture supports it natively. The T&Cs make it explicit.
+
+### Stated error bars on every quantitative output
+
+economAIcs does not claim false-precision win probabilities. The Analyst produces an evidence-backed bid-strength score with stated error bars and transparent drivers — the only commercially defensible posture for evidence-grounded procurement work.
+
 ---
 
 ## Who economAIcs serves
 
-UK public transport operators bidding for procurement contracts:
+UK public transport bidding for procurement contracts. Three customer segments:
 
-- **Bus operators** — local, regional, national, franchised and commercial. Bus is the largest tender volume vertical in UK public transport.
-- **Rail operators and rail-adjacent businesses** — passenger operators, freight, station operators, train technology providers.
-- **Ferry operators** — domestic UK ferry services, particularly Scottish and Welsh waters.
-- **Transport technology providers** — software, hardware, electrification, ticketing, MaaS providers bidding on framework agreements.
-- **Specialist advisory firms** — transport consultants who bid for advisory contracts or who bid alongside operators on consortium responses.
+- **Public transport operators** — local, regional, national, franchised and commercial. Bus, rail, ferry. Bus is the largest tender volume vertical in UK public transport.
+- **Transport technology providers** — software, hardware, electrification, ticketing, MaaS providers. From single-product vendors to platform vendors and Tier-1 integrators bidding on framework agreements.
+- **Transport consultancies and specialist advisory firms** — from solo bid practices through mid-market consultancies to Tier-1 firms (Arup, Mott MacDonald, Atkins scale) who bid for advisory contracts or who bid alongside operators on consortium responses.
 
-The qualification threshold is operators bidding on five or more tenders per year. Below that volume, the platform value is harder to realise. Revenue range £5m to £500m+.
+The qualification threshold is bidding on five or more tenders / bid responses per year. Below that volume, the platform value is harder to realise. Revenue range £5m to £500m+.
 
 England is the primary market. Scotland and Wales are secondary markets. Northern Ireland is included by jurisdiction (England, Wales, Northern Ireland share the Procurement Act 2023 regime; Scotland has its own procurement law).
 
@@ -220,11 +282,11 @@ England is the primary market. Scotland and Wales are secondary markets. Norther
 
 The core problem economAIcs solves is the intelligence gap in UK public transport procurement.
 
-**Intelligence gap defined:** the asymmetry between what a bidding operator currently knows and what would be required to bid optimally. Components of the gap typically include: how the contracting authority has scored past bids; which competitors are incumbent or likely to incumbent; what the social value weighting actually rewards in practice; what the operator's own historical evidence base contains and how to retrieve it; what Procurement Act 2023 obligations apply to this specific notice; what the genuine win probability is before resource is committed.
+**Intelligence gap defined:** the asymmetry between what a bidding operator currently knows and what would be required to bid optimally. Components of the gap typically include: how the contracting authority has scored past bids; which competitors are incumbent or likely to incumbent; what the social value weighting actually rewards in practice; what the operator's own historical evidence base contains and how to retrieve it; what Procurement Act 2023 obligations apply to this specific notice; what the genuine evidence-backed bid-strength is before resource is committed.
 
 A bid team relying on memory, spreadsheets and generic AI cannot close this gap. Manual procurement intelligence work runs at a fraction of the velocity required to compete with operators who have closed the gap technically.
 
-economAIcs closes the gap. The Brain holds the operator's evidence base searchable and source-cited. The Scout closes the time gap (90+ day early signal). The Analyst closes the scoring gap (transparent win probability with traceable drivers). The Ghostwriter closes the drafting gap (criteria-aware first draft with sourced claims). The Steward closes the rebid gap (compounding intelligence over the contract lifecycle).
+economAIcs closes the gap. The Brain holds the operator's evidence base searchable and source-cited. The Scout closes the time gap (90+ day early signal). The Analyst closes the scoring gap (evidence-backed bid-strength with stated error bars and traceable drivers). The Ghostwriter closes the drafting gap (criteria-aware first draft with sourced claims). The Steward closes the rebid gap (compounding intelligence over the contract lifecycle).
 
 ---
 
@@ -232,15 +294,17 @@ economAIcs closes the gap. The Brain holds the operator's evidence base searchab
 
 economAIcs is not these things:
 
-**Not a generic AI bid-writing tool** (such as AutogenAI or similar). Generic tools can write. They have no operator-specific knowledge of fleet, history, authority relationships, or local procurement mechanics. They do not monitor tenders. They do not score win probability. They do not track post-award. They do not maintain audit-grade source trails by default. The distinction matters in practice: generic AI applied to a poorly qualified opportunity with no evidence base produces a polished bid that loses, and cannot defend its claims under audit.
+**Not a generic AI bid-writing tool** (such as AutogenAI or similar). Generic tools can write. They have no operator-specific knowledge of fleet, history, authority relationships, or local procurement mechanics. They do not monitor tenders. They do not produce evidence-backed bid-strength scores with stated error bars. They do not track post-award. They do not maintain audit-grade source trails by default. The distinction matters in practice: generic AI applied to a poorly qualified opportunity with no evidence base produces a polished bid that loses, and cannot defend its claims under audit.
 
-**Not a tender alert service.** Alert services forward notices. The Scout scores every notice against ICP fit, win probability, competitor incumbent position, and Procurement Act 2023 alignment before a human sees it. The output is a ranked pipeline, not an inbox of alerts.
+**Not a tender alert service.** Alert services forward notices. The Scout scores every notice against ICP fit, evidence-backed bid-strength, competitor incumbent position, and Procurement Act 2023 alignment before a human sees it. The output is a ranked pipeline, not an inbox of alerts.
 
 **Not a bid consultancy with a tech wrapper.** economAIcs is infrastructure. The Bid Consulting offer exists to deploy and apply the infrastructure, not to replace it. Consultants without infrastructure cannot scale. Infrastructure without consultants leaves operators without the senior procurement expertise to apply it well. economAIcs provides both, separately priced.
 
 **Not built before the Procurement Act 2023.** This matters because the Act introduced new notice types, dynamic market provisions, and revised transparency obligations that came into force in February 2025. Tools built before that date are retrofitting. economAIcs was designed around the new regime.
 
 **Not a compliance bolt-on.** Many AI tools market a compliance feature. economAIcs treats compliance as architecture: every retrieval, score and output is logged, versioned and source-cited automatically. Audit trail is not an option to enable. It is the default state.
+
+**Not a vendor lock-in.** Brain Portability Guarantee is structural: 7-day export of indexed corpus and derived artefacts on departure. Explicit in T&Cs.
 
 ---
 
@@ -261,7 +325,7 @@ The product exists because Ben watched companies with strong operations lose con
 - Database: Supabase with pgvector extension
 - Architecture: Multi-tenant, client-isolated schemas
 - Orchestration: n8n cloud (workflow engine)
-- Frontend: React, TypeScript
+- Frontend: Framer (marketing site at economaicsgroup.com) + React/TypeScript via Lovable (product app at bid.economaicsgroup.com from 1 July 2026)
 - Tender data: Find a Tender OCDS API + Contracts Finder OCDS API (live, not scraped)
 - CPV coverage: 60000000 to 63700000 (transport services category)
 - Data jurisdiction: UK and EU only, across all processing and storage
@@ -278,9 +342,15 @@ The product exists because Ben watched companies with strong operations lose con
 
 **Bid intelligence** — the structured application of AI and data to improve procurement outcomes across the full tender lifecycle. Distinct from generic AI writing assistance.
 
+**Bid-strength score** — the quantitative output economAIcs produces in place of a "win probability." Every score ships with stated error bars and transparent drivers (evidence depth, evaluator-language alignment, authority-archetype fit, social-value optimisation). The Analyst's defining output.
+
+**Brain Portability Guarantee** — economAIcs commitment that the operator's indexed Brain and all derived artefacts are exportable in machine-readable form within 7 days of departure. No vendor lock-in mechanic. Explicit in T&Cs.
+
 **Compliance-grade by design** — an architectural posture distinct from "compliance as a feature." Compliance obligations (Procurement Act 2023, audit trail, data sovereignty, model training prohibition) are built into the architecture from the first line of code, not bolted on later.
 
 **Contracts Finder** — UK government procurement portal (contractsfinder.service.gov.uk). Covers lower-value contracts and supplements Find a Tender. Accessed via OCDS API.
+
+**Cost Truth Line** — economAIcs commitment to margin-on-invoice transparency. Phased rollout: rolls in from FC#1 for consultancy and tech-vendor partners; operator partners onboarded with this from day 90.
 
 **CPV codes (Common Procurement Vocabulary)** — EU and UK standard classification system for procurement categories. economAIcs monitors CPV range 60000000 to 63700000, covering passenger transport, freight, infrastructure services, technology and ancillary services.
 
@@ -289,6 +359,8 @@ The product exists because Ben watched companies with strong operations lose con
 **Evaluation criteria** — the published weighting framework used by contracting authorities to score bid responses. Typically includes quality, social value, price and technical competence.
 
 **Find a Tender** — UK government's primary procurement notice portal (find-tender.service.gov.uk). Publishes notices in OCDS format via public API.
+
+**Founding Partner status** — earned by the first 10 Validation Cohort participants to convert at Month 4. Carries price-lock-for-life, additional Co-Pilot Hours, first-crack-at-new-modules, named-in-case-studies (with approval), direct roadmap-input line, Brain Portability explicit in T&Cs.
 
 **ICP (Ideal Client Profile)** — in the economAIcs context, the profile of tender characteristics most suited to a specific operator. Used by the Scout to score and rank opportunities before human review.
 
@@ -306,19 +378,29 @@ The product exists because Ben watched companies with strong operations lose con
 
 **Procurement Act 2023** — the legislation that replaced the Public Contracts Regulations 2015 in England, Wales and Northern Ireland. Came into force February 2025. Introduced new notice types, dynamic market provisions, revised transparency requirements and updated evaluation criteria frameworks.
 
+**Procurement Act 2023 Transparency Pack** — Enterprise-band inclusion. Productises the Act's transparency-obligation requirements: notice-publication audit, evaluation-criteria disclosure scaffolding, post-award reporting templates.
+
 **Procurement mechanics** — the specific evaluation behaviours, weighting patterns and authority preferences that determine how a particular contracting authority awards contracts. Distinct from the formal published specification.
 
 **RAG (Retrieval-Augmented Generation)** — the AI architecture underlying the Brain. Client documents are converted to vector embeddings and stored in a private database. Queries retrieve the most relevant document passages before generating a cited response.
 
 **Red team** — in procurement, a structured challenge to a bid from the perspective of the evaluator or a competitor. The Analyst's red team mode argues the case against the bid before submission.
 
+**Should You Bid?** — the customer-facing CTA for Bid Decision Economics — the surface where Models A (Time-Cost Projection) and B (Bid-Strength) combine to advise on bid pursuit. Public methodology page from launch; full live output gated on n≥20 calibration.
+
 **Social value** — a mandatory evaluation criterion in UK public procurement. Typically weighted between 10 and 20 percent. Covers employment, community benefit, environmental impact and supply chain commitments. Frequently the differentiating criterion in transport contract awards.
 
 **Sovereign data jurisdiction** — a data architecture commitment whereby all client data is processed and stored exclusively within the operator's home jurisdiction (UK and EU for economAIcs) and never used to train AI models.
 
+**Source 4 founder rules library** — the productised version of the founder's 500+ tender pattern recognition. Evaluator heuristics, scoring assumptions, authority archetypes, pricing logic, mobilisation risk indicators. Cited on every Ghostwriter output (Truth-Gate enforcement).
+
+**The operating layer for transport bidding** — the customer-facing positioning of The Transport Brain. The platform that sits across the bid lifecycle and turns every stage into evidence-grounded, source-cited work.
+
 **The transport brain** — the unified mental model for economAIcs. A single connected intelligence and compliance system built for UK public transport. Two functions: knowing more (intelligence) and controlling AI output (compliance).
 
-**Trustable AI output** — AI output where every claim is traceable to a source, every score is defensible, and every retrieval is logged. The opposite of black-box AI.
+**Trustable AI output** — AI output where every claim is traceable to a source, every score is defensible with stated error bars, and every retrieval is logged. The opposite of black-box AI.
+
+**Validation Cohort** — the pilot offer that opens the first 50 founder-network contacts to a 3-month pilot at £1,500 upfront, with Month-4 conversion-or-step-away. Founding Partner status earned by first 10 to convert. Launches 1 July 2026.
 
 **Win rate improvement** — the measurable increase in successful procurement outcomes attributable to better bid intelligence, earlier opportunity identification and higher quality submissions.
 
@@ -345,6 +427,7 @@ This file is one layer of the economAIcs AI-discovery surface. The full set:
 - `https://economaicsgroup.com/llms.txt` — short structured business brief
 - `https://economaicsgroup.com/llms-full.txt` — this file (deep retrieval)
 - `https://economaicsgroup.com/agents.json` — structured agent capability manifest
+- `https://economaicsgroup.com/module-roadmap` — five-capability V1.0 / V1.1 / V2 build-state map
 - `https://economaicsgroup.com/skills/README.md` — skill cards index
 - `https://economaicsgroup.com/skills/brain.md` — Brain skill card
 - `https://economaicsgroup.com/skills/scout.md` — Scout skill card
