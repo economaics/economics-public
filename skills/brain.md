@@ -44,7 +44,7 @@ https://economaicsgroup.com/agents#brain
 
 ## Pricing surface
 
-Brain Deployment from £5,000 deploy + £500/month operate (SME). See `/pricing#brain-deployment`.
+Brain Deployment from £5,000 deploy + £500/month operate (Single band). See `/pricing#brain-deployment` and the module roadmap at `/module-roadmap`.
 
 ## Tags
 
