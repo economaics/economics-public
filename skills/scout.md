@@ -2,7 +2,7 @@
 
 **Agent:** The Scout
 **System:** The Transport Brain (economAIcs)
-**Role:** Autonomous Signal Intelligence
+**Role:** Continuous Signal Intelligence
 
 ## One-line
 
@@ -10,7 +10,7 @@ Continuous monitoring of Find a Tender and Contracts Finder for UK transport opp
 
 ## What it does
 
-The Scout consumes the public OCDS feeds from Find a Tender and Contracts Finder, filters against transport CPV codes 60000000 to 63700000, scores every notice against the client's Ideal Client Profile, and ranks by win probability. Prior Information Notice monitoring surfaces opportunities 90 or more days before formal release.
+The Scout consumes the public OCDS feeds from Find a Tender and Contracts Finder, filters against transport CPV codes 60000000 to 63700000, scores every notice against the client's Ideal Client Profile, and ranks by evidence-backed bid-strength with stated error bars. Prior Information Notice monitoring surfaces opportunities 90 or more days before formal release.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ The Scout consumes the public OCDS feeds from Find a Tender and Contracts Finder
 - Ranked pipeline of qualified opportunities
 - Early-signal alerts from PIN monitoring
 - Procurement Act 2023 alignment flag per tender
-- Win-probability score on every notice before human review
+- Bid-strength score with stated error bars on every notice before human review
 
 ## Compliance properties
 
@@ -46,4 +46,4 @@ Included in Brain Deployment monthly operate fee. See `/pricing#brain-deployment
 
 ## Tags
 
-`tender-monitoring` · `OCDS` · `PIN` · `CPV` · `win-probability` · `Procurement-Act-2023` · `Find-a-Tender` · `Contracts-Finder`
+`tender-monitoring` · `OCDS` · `PIN` · `CPV` · `bid-strength` · `Procurement-Act-2023` · `Find-a-Tender` · `Contracts-Finder`
