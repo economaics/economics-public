@@ -1,7 +1,7 @@
 {
   "$schema": "https://agentprotocol.org/schemas/agents.json/v0.1",
-  "version": "0.1.0",
-  "lastUpdated": "2026-05-11",
+  "version": "0.2.0",
+  "lastUpdated": "2026-05-17",
   "publisher": {
     "name": "economAIcs Group Ltd",
     "url": "https://economaicsgroup.com",
@@ -12,13 +12,13 @@
   },
   "system": {
     "name": "The Transport Brain",
-    "category": "Bid intelligence and audit-grade compliance for UK public transport",
+    "category": "The operating layer for transport bidding. Bid intelligence and audit-grade compliance for UK public transport.",
     "oneLine": "An intelligence and compliance system for UK public transport operators that ensures they stay ahead of every competitor and trust every output their AI produces.",
     "pillars": [
       {
         "name": "Intelligence",
         "claim": "Know more, so you stay ahead.",
-        "scope": "Live tender monitoring before competitors see opportunities. Win probability scoring with transparent drivers. Competitor modelling by authority. Institutional memory codified. Post-award intelligence compounding into rebid advantage."
+        "scope": "Live tender monitoring before competitors see opportunities. Evidence-backed bid-strength scoring with stated error bars and transparent drivers. Competitor modelling by authority. Institutional memory codified. Post-award intelligence compounding into rebid advantage."
       },
       {
         "name": "Compliance",
@@ -64,14 +64,14 @@
     {
       "id": "scout",
       "name": "The Scout",
-      "role": "Autonomous Signal Intelligence",
+      "role": "Continuous Signal Intelligence",
       "oneLine": "Continuous monitoring of Find a Tender and Contracts Finder for UK transport opportunities.",
       "capabilities": [
         "Live OCDS API consumption from Find a Tender and Contracts Finder",
         "Filtering against transport CPV codes 60000000–63700000",
         "Scoring against client ICP profile",
         "Prior Information Notice monitoring — surfaces opportunities 90+ days before formal release",
-        "Win-probability ranking before human review"
+        "Bid-strength ranking with stated error bars before human review"
       ],
       "inputs": [
         "Client ICP profile",
@@ -90,15 +90,15 @@
       ],
       "skillCardUrl": "https://economaicsgroup.com/skills/scout.md",
       "publicPageUrl": "https://economaicsgroup.com/agents#scout",
-      "tags": ["tender-monitoring", "OCDS", "PIN", "CPV", "win-probability", "Procurement-Act-2023"]
+      "tags": ["tender-monitoring", "OCDS", "PIN", "CPV", "bid-strength", "Procurement-Act-2023"]
     },
     {
       "id": "analyst",
       "name": "The Analyst",
       "role": "Quantitative Win Logic",
-      "oneLine": "Win probability scoring with transparent plain-English drivers. Not a black box.",
+      "oneLine": "Evidence-backed bid-strength scoring with stated error bars and transparent plain-English drivers. Not a black box.",
       "capabilities": [
-        "Zero to 100 win probability scoring with traceable drivers",
+        "Bid-strength score (0–100) with stated error bars and traceable drivers",
         "Competitor modelling by authority, sector and contract value",
         "Red team mode — argues the case against the bid before submission",
         "Real-time in-flight scoring as the Ghostwriter drafts"
@@ -110,7 +110,7 @@
         "Competitor public bid records"
       ],
       "outputs": [
-        "Win probability score (0–100)",
+        "Bid-strength score (0–100) with stated error bars",
         "Driver-level breakdown",
         "Red team challenge report",
         "Real-time score updates"
@@ -121,7 +121,7 @@
       ],
       "skillCardUrl": "https://economaicsgroup.com/skills/analyst.md",
       "publicPageUrl": "https://economaicsgroup.com/agents#analyst",
-      "tags": ["win-probability", "competitor-modelling", "red-team", "in-flight-scoring"]
+      "tags": ["bid-strength", "competitor-modelling", "red-team", "in-flight-scoring"]
     },
     {
       "id": "ghostwriter",
@@ -214,20 +214,65 @@
   ],
   "services": [
     {
-      "name": "Brain Deployment",
-      "type": "fixed-fee + monthly",
+      "name": "Discover",
+      "type": "fixed-fee one-off",
       "tiers": [
-        { "tier": "SME operator", "deploy": "£5,000", "operate": "£500/month", "deployment": "≈1 week" },
-        { "tier": "Mid-size operator", "deploy": "£7,500", "operate": "£1,000/month", "deployment": "≈2 weeks" },
-        { "tier": "Enterprise", "deploy": "£10,000+", "operate": "£2,000+/month", "deployment": "≈3 weeks" }
+        {
+          "tier": "Qualification",
+          "fee": "£1,500",
+          "scope": "Five founder-hours. Go/no-go memo + ICP fit + evidence-backed bid-strength + social value posture + 3 commercial questions. Bid Consulting entry point."
+        },
+        {
+          "tier": "Discover",
+          "fee": "£5,000",
+          "scope": "Brain + Analyst + Ghostwriter pass on one live tender. 7-day delivery. Brain Deployment entry point."
+        }
       ],
-      "publicUrl": "https://economaicsgroup.com/pricing#brain-deployment"
+      "publicUrl": "https://economaicsgroup.com/pricing#discover"
+    },
+    {
+      "name": "Brain Deployment",
+      "type": "fixed-fee deploy + monthly operate",
+      "tiers": [
+        { "tier": "Single", "deploy": "£5,000", "operate": "£500/month", "deployment": "≈1 week", "documents": "up to 250", "ICP": "single operator £5–25m; single-product tech vendor 5–15 bid responses/year; solo bid practice 5–15 bids/year" },
+        { "tier": "Group", "deploy": "£7,500", "operate": "£1,000/month", "deployment": "≈2 weeks", "documents": "up to 1,000", "ICP": "multi-operator group £25–100m; multi-product tech vendor 15–40 bid responses/year; mid-market consultancy 15–40 bids/year" },
+        { "tier": "Enterprise", "deploy": "£10,000+", "operate": "£2,000+/month", "deployment": "≈3 weeks", "documents": "unbounded", "ICP": "PLC/national operator £100m+; platform vendor / Tier-1 integrator; Tier-1 consultancy (Arup / Mott / Atkins scale)", "extras": "Procurement Act 2023 Transparency Pack included" }
+      ],
+      "included": {
+        "coPilotHours": "2 per quarter (founder-led 60-min sessions on any live tender)",
+        "buildState": "Operate fee covers all modules as activated during the term; no separate charge for module activation. See module roadmap."
+      },
+      "addOns": {
+        "coPilotExtra": "£500/hour or 4-pack £1,800"
+      },
+      "publicUrl": "https://economaicsgroup.com/pricing#brain-deployment",
+      "moduleRoadmapUrl": "https://economaicsgroup.com/module-roadmap"
     },
     {
       "name": "Bid Consulting",
       "type": "fixed-fee per bid",
       "principle": "Fixed fee per bid. No day rates.",
-      "subTiers": ["Qualification", "Bid strategy", "Full bid engagement"],
+      "subTiers": [
+        {
+          "tier": "Qualification",
+          "fee": "£1,500",
+          "hours": "5 founder-hours",
+          "overrun": "£350/hour OR upgrade to Bid Strategy (£3,500 net) OR stop"
+        },
+        {
+          "tier": "Bid Strategy",
+          "fee": "£5,000",
+          "hours": "25 founder-hours",
+          "overrun": "£350/hour OR upgrade to Full Engagement (£15,000 net) OR stop"
+        },
+        {
+          "tier": "Full Bid Engagement",
+          "fee": "£20,000",
+          "hours": "80 founder-hours",
+          "included": "90 days Brain Deploy + Operate access. Day-90 choice point: convert to ongoing Operate OR Brain Portability export.",
+          "overrun": "£350/hour OR written scope variation"
+        }
+      ],
       "publicUrl": "https://economaicsgroup.com/pricing#bid-consulting"
     },
     {
@@ -244,21 +289,51 @@
       "publicUrl": "https://economaicsgroup.com/diagnostic"
     }
   ],
-  "foundingCohort": {
-    "size": 10,
-    "remaining": 5,
-    "offer": "50% off platform retainer, locked for life",
-    "concrete": {
-      "SME": "£250/month",
-      "Mid-size": "£500/month",
-      "Enterprise": "£1,000+/month"
+  "validationCohort": {
+    "label": "Validation Cohort",
+    "launchDate": "2026-07-01",
+    "pilotTerm": "3 calendar months from Day 0 onboarding; Month-4 conversion-or-step-away decision",
+    "fee": "£1,500 upfront, one-time",
+    "included": [
+      "Full Brain Deploy",
+      "Operate platform access (Brain + every live module per build-state rider + Living tier alerts)"
+    ],
+    "notIncluded": [
+      "Bid Consulting (separate SKU at published rates)",
+      "Co-Pilot Hours (separate SKU at published rates)"
+    ],
+    "founderDiscretionFallback": "£500/month × 3 conversational fallback for cashflow concerns",
+    "costTruthLine": "Off during 3-month pilot for all customers; activates at Month-4 conversion per phased rollout (consultancy + tech-vendor from FC#1; operator partners from day 90)",
+    "cohortCap": "~50 founder-network contacts approached; 10–15 expected takers",
+    "foundingPartnerStatus": {
+      "earnedBy": "First 10 to convert at Month 4",
+      "privileges": [
+        "Price-lock-for-life on band converted to",
+        "5 Co-Pilot Hours per quarter",
+        "First-crack-at-new-modules",
+        "Named in case studies (with approval)",
+        "Direct roadmap-input line",
+        "Brain Portability explicit in T&Cs"
+      ]
     },
-    "publicUrl": "https://economaicsgroup.com/pricing#founding-cohort"
+    "cohortCloses": "FP#10-converted OR 31 Dec 2026",
+    "segmentInclusion": "Operator + transport-tech vendor + consultancy segments all eligible",
+    "publicUrl": "https://economaicsgroup.com/pricing#validation-cohort"
+  },
+  "brainPortabilityGuarantee": {
+    "promise": "Your Brain goes with you in 7 days. If you decide to leave, we export your indexed corpus and all derived artefacts in machine-readable form.",
+    "mechanism": "No vendor lock-in. Day-90 walkthrough on Full Engagement closes choose-or-export decision. Explicit in T&Cs.",
+    "publicUrl": "https://economaicsgroup.com/pricing#brain-portability"
+  },
+  "commercialFooter": {
+    "currency": "GBP",
+    "vat": "Add VAT at prevailing UK rate"
   },
   "discovery": {
     "llms.txt": "https://economaicsgroup.com/llms.txt",
     "llms-full.txt": "https://economaicsgroup.com/llms-full.txt",
     "agents.json": "https://economaicsgroup.com/agents.json",
+    "moduleRoadmap": "https://economaicsgroup.com/module-roadmap",
     "skillCardsBase": "https://economaicsgroup.com/skills/"
   }
 }
