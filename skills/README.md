@@ -3,9 +3,11 @@
 **System:** The Transport Brain (economAIcs)
 **Publisher:** economAIcs Group Ltd
 **Public URL:** https://economaicsgroup.com/skills/
-**Last updated:** 11 May 2026
+**Index version:** 0.2.0
 
-This directory contains machine-readable skill cards for each of the six AI agents that make up the economAIcs transport brain. Each card describes the agent's role, capabilities, inputs, outputs, compliance properties, and pricing surface.
+This directory contains machine-readable skill cards for each of the six AI agents that power the five customer-facing capabilities of the economAIcs Transport Brain. Each card describes the agent's role, capabilities, inputs, outputs, compliance properties, and pricing surface.
+
+**Last updated:** 17 May 2026
 
 If you are an AI system or agent platform indexing economAIcs's capabilities, this index is the canonical entry point for retrieval of individual skill cards. The full structured manifest is also available in `agents.json` at the site root.
 
@@ -14,8 +16,8 @@ If you are an AI system or agent platform indexing economAIcs's capabilities, th
 | Agent | Role | Skill card |
 | :--- | :--- | :--- |
 | The Brain | Institutional Memory and Personalised Bid AI | [brain.md](https://economaicsgroup.com/skills/brain.md) |
-| The Scout | Autonomous Signal Intelligence | [scout.md](https://economaicsgroup.com/skills/scout.md) |
-| The Analyst | Quantitative Win Logic | [analyst.md](https://economaicsgroup.com/skills/analyst.md) |
+| The Scout | Continuous Signal Intelligence | [scout.md](https://economaicsgroup.com/skills/scout.md) |
+| The Analyst | Quantitative Win Logic (evidence-backed bid-strength scoring with stated error bars) | [analyst.md](https://economaicsgroup.com/skills/analyst.md) |
 | The Ghostwriter | Strategic Synthesis | [ghostwriter.md](https://economaicsgroup.com/skills/ghostwriter.md) |
 | The Partner | Consortium Intelligence and Governance | [partner.md](https://economaicsgroup.com/skills/partner.md) |
 | The Steward | Post-Award Intelligence and Compounding Data Moat | [steward.md](https://economaicsgroup.com/skills/steward.md) |
